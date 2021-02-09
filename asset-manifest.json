@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/psycho-test/static/css/main.f9039ec0.chunk.css",
-    "main.js": "/psycho-test/static/js/main.2fef838d.chunk.js",
-    "main.js.map": "/psycho-test/static/js/main.2fef838d.chunk.js.map",
+    "main.css": "/psycho-test/static/css/main.74c3465f.chunk.css",
+    "main.js": "/psycho-test/static/js/main.f3356b14.chunk.js",
+    "main.js.map": "/psycho-test/static/js/main.f3356b14.chunk.js.map",
     "runtime-main.js": "/psycho-test/static/js/runtime-main.62763e49.js",
     "runtime-main.js.map": "/psycho-test/static/js/runtime-main.62763e49.js.map",
     "static/js/2.3ff9b06a.chunk.js": "/psycho-test/static/js/2.3ff9b06a.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.311daf24.chunk.js": "/psycho-test/static/js/3.311daf24.chunk.js",
     "static/js/3.311daf24.chunk.js.map": "/psycho-test/static/js/3.311daf24.chunk.js.map",
     "index.html": "/psycho-test/index.html",
-    "static/css/main.f9039ec0.chunk.css.map": "/psycho-test/static/css/main.f9039ec0.chunk.css.map",
+    "static/css/main.74c3465f.chunk.css.map": "/psycho-test/static/css/main.74c3465f.chunk.css.map",
     "static/js/2.3ff9b06a.chunk.js.LICENSE.txt": "/psycho-test/static/js/2.3ff9b06a.chunk.js.LICENSE.txt",
     "static/media/dollar.c715e3fb.png": "/psycho-test/static/media/dollar.c715e3fb.png",
     "static/media/money.2db9ebbb.png": "/psycho-test/static/media/money.2db9ebbb.png",
@@ -19,7 +19,7 @@
   "entrypoints": [
     "static/js/runtime-main.62763e49.js",
     "static/js/2.3ff9b06a.chunk.js",
-    "static/css/main.f9039ec0.chunk.css",
-    "static/js/main.2fef838d.chunk.js"
+    "static/css/main.74c3465f.chunk.css",
+    "static/js/main.f3356b14.chunk.js"
   ]
 }

@@ -1,7 +1,7 @@
 .section {
-  max-width: 522px;
+  max-width: 400px;
   min-width: 400px;
-  width: 100%;
+  /* width: 100%; */
   margin-top: 30px;
   margin-bottom: 30px;
   min-height: 500px;
@@ -38,19 +38,19 @@
   border-radius: 20px;
 }
 .second-stage span {
-  padding-left: 10px;
+  padding-left: 20px;
 }
 .question-box {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   margin-top: 20px;
 }
 .question {
-  width: 40%;
-  background-color: white;
-  margin-bottom: 20px;
+  width: 41%;
   border-radius: 20px;
-  padding: 10px;
+  padding: 5px;
   margin: 10px;
   text-align: center;
   font-size: 20px;

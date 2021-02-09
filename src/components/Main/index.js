@@ -3,7 +3,7 @@ import NewYearMoney from '../PsychoTest/NewYearMoney';
 
 function Main() {
   return (
-    <BrowserRouter> 
+    <BrowserRouter basename={process.env.PUBLIC_URL}> 
       <div>
         {/* <Link to="/">홈</Link><br/>
         <Link to="/photo">사진</Link><br/>

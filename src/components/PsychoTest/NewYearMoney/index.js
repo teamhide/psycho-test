@@ -110,16 +110,28 @@ function NewYearMoney({match}) {
       return (
         <>
           <p style={{fontSize: 30, fontWeight: 700}}>{calculateMoney()} 만원</p>
-          <span style={{fontSize: 20, marginBottom: 10}}>어린이 여러분</span>
           <span style={{fontSize: 20, marginBottom: 10}}>요즘도 세뱃돈으로 장난감 사시나요?</span>
           <span style={{fontSize: 20, marginBottom: 10}}>삼성전자 몰빵이 답입니다.</span>
-          <span style={{fontSize: 20}}>삼전 가즈아~!</span>
         </>
       )
     } else if (age == 20) {
-
+      return (
+        <>
+          <p style={{fontSize: 30, fontWeight: 700}}>{calculateMoney()} 만원</p>
+          <span style={{fontSize: 20, marginBottom: 10}}>코로나로 뒤숭숭한 요즘,</span>
+          <span style={{fontSize: 20, marginBottom: 10}}>부모님에게 건강식품이라도</span>
+          <span style={{fontSize: 20, marginBottom: 10}}>보내드리는건 어떨까요?</span>
+        </>
+      )
     } else if (age == 30) {
-
+      return (
+        <>
+          <p style={{fontSize: 30, fontWeight: 700}}>{calculateMoney()} 만원</p>
+          <span style={{fontSize: 20, marginBottom: 10}}>나이를 생각해야 할 30대,</span>
+          <span style={{fontSize: 20, marginBottom: 10}}>올 한해는 꼭 헬스장을 등록하여</span>
+          <span style={{fontSize: 20, marginBottom: 10}}>건강한 내 자신을 만들어봐요!</span>
+        </>
+      )
     } else if (age == 40) {
       return (
         <>
@@ -138,7 +150,7 @@ function NewYearMoney({match}) {
   }
 
   useEffect(() => {
-    document.title = "새뱃돈 예측기"
+    document.title = "세뱃돈 예측기"
     getIp();
     // createKakaoButton();
   }, []);
@@ -148,11 +160,11 @@ function NewYearMoney({match}) {
       <div className="section">
         { stage === 0 ? (
           <div className="first-stage">
-            <span className="title-first">내가 받을 새뱃돈은?</span>
+            <span className="title-first">내가 받을 세뱃돈은?</span>
             <span className="title-second">올해는 얼마나 받을까..!</span>
             <div className="section-body">
               <img src={MoneyImg} height={200} width={250}/>
-              <button className="button" onClick={onClickStartButton}>새뱃돈 측정하기</button>
+              <button className="button" onClick={onClickStartButton}>세뱃돈 측정하기</button>
             </div>
           </div>
         ) : [

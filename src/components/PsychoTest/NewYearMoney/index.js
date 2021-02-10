@@ -89,9 +89,9 @@ function NewYearMoney({match}) {
   })
 
   const calculateMoney = () => {
-    const rand = Math.floor(Math.random() * 100);
+    const rand = Number(Math.floor(Math.random() * 100));
     let today = new Date();
-    let date = today.getDate();
+    let date = Number(today.getDate());
 
     if (age == 40) {
       return
@@ -99,9 +99,9 @@ function NewYearMoney({match}) {
 
     if (secret == 17) {
       return 150
-    } else if (secret === Number(date)) {
+    } else if (secret === date) {
       return 200
-    } else if (secret === Number(rand)) {
+    } else if (secret === rand) {
       return 300
     }
     let result = Math.floor(secret / rand * age);
@@ -126,31 +126,7 @@ function NewYearMoney({match}) {
       ["당신은 존재하나만으로", "충분히 가치있는 사람입니다."],
     ]
 
-    if (age == 10) {
-      return (
-        <>
-          <p style={{fontSize: 30, fontWeight: 700}}>{calculateMoney()} 만원</p>
-          <span style={{fontSize: 20, marginBottom: 10}}>{arr[rand][0]}</span>
-          <span style={{fontSize: 20, marginBottom: 10}}>{arr[rand][1]}</span>
-        </>
-      )
-    } else if (age == 20) {
-      return (
-        <>
-          <p style={{fontSize: 30, fontWeight: 700}}>{calculateMoney()} 만원</p>
-          <span style={{fontSize: 20, marginBottom: 10}}>{arr[rand][0]}</span>
-          <span style={{fontSize: 20, marginBottom: 10}}>{arr[rand][1]}</span>
-        </>
-      )
-    } else if (age == 30) {
-      return (
-        <>
-          <p style={{fontSize: 30, fontWeight: 700}}>{calculateMoney()} 만원</p>
-          <span style={{fontSize: 20, marginBottom: 10}}>{arr[rand][0]}</span>
-          <span style={{fontSize: 20, marginBottom: 10}}>{arr[rand][1]}</span>
-        </>
-      )
-    } else if (age == 40) {
+    if (age == 40) {
       return (
         <>
           <p style={{fontSize: 30, fontWeight: 700}}>0원</p>
@@ -158,6 +134,14 @@ function NewYearMoney({match}) {
         </>
       )
     }
+
+    return (
+      <>
+        <p style={{fontSize: 30, fontWeight: 700}}>{calculateMoney()} 만원</p>
+        <span style={{fontSize: 20, marginBottom: 10}}>{arr[rand][0]}</span>
+        <span style={{fontSize: 20, marginBottom: 10}}>{arr[rand][1]}</span>
+      </>
+    )
   }
 
   const calculateResultImg = () => {

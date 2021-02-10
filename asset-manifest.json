@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/psycho-test/static/css/main.41ff9ca3.chunk.css",
-    "main.js": "/psycho-test/static/js/main.5b94558a.chunk.js",
-    "main.js.map": "/psycho-test/static/js/main.5b94558a.chunk.js.map",
+    "main.js": "/psycho-test/static/js/main.eca54806.chunk.js",
+    "main.js.map": "/psycho-test/static/js/main.eca54806.chunk.js.map",
     "runtime-main.js": "/psycho-test/static/js/runtime-main.62763e49.js",
     "runtime-main.js.map": "/psycho-test/static/js/runtime-main.62763e49.js.map",
     "static/js/2.06c72c9e.chunk.js": "/psycho-test/static/js/2.06c72c9e.chunk.js",
@@ -20,6 +20,6 @@
     "static/js/runtime-main.62763e49.js",
     "static/js/2.06c72c9e.chunk.js",
     "static/css/main.41ff9ca3.chunk.css",
-    "static/js/main.5b94558a.chunk.js"
+    "static/js/main.eca54806.chunk.js"
   ]
 }

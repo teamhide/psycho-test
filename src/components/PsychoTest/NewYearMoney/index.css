@@ -1,10 +1,11 @@
 .section {
   max-width: 400px;
-  min-width: 400px;
-  /* width: 100%; */
   margin-top: 30px;
   margin-bottom: 30px;
   min-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .first-stage {
   display: flex;

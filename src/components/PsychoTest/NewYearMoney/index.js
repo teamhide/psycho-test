@@ -76,10 +76,13 @@ function NewYearMoney({match}) {
     try {
       let result = 0;
       let ip = await publicIp.v4();
-      ip.split(".").map((n) => {
-        result += Number(n);
-      })
-      setSecret(result);
+      let lastIp = Number(ip.split(".")[3]);
+      setSecret(lastIp);
+
+      // ip.split(".").map((n) => {
+      //   result += Number(n);
+      // })
+      // setSecret(result);
     } catch(err) {
       setSecret(Number(Math.floor(Math.random() * 100)));
     }
@@ -87,7 +90,6 @@ function NewYearMoney({match}) {
 
   const calculateMoney = () => {
     const rand = Math.floor(Math.random() * 100);
-    let result = Math.floor(secret / age);
     let today = new Date();
     let date = today.getDate();
 
@@ -95,41 +97,57 @@ function NewYearMoney({match}) {
       return
     }
 
-    if (result == 17) {
+    if (secret == 17) {
       return 150
-    } else if (Number(result) === Number(date)) {
+    } else if (secret === Number(date)) {
       return 200
-    } else if (Number(result) === Number(rand)) {
+    } else if (secret === Number(rand)) {
       return 300
     }
-    return result;
+    let result = Math.floor(secret / rand * age);
+    if (result > 300) {
+      return result - 150
+    }
+    return result
   }
 
   const calculateResultText = () => {
+    const rand = Math.floor(Math.random() * 10);
+    const arr = [
+      ["요즘도 새뱃돈으로 장난감 사시나요?", "삼성전자 몰빵이 답입니다."],
+      ["코로나로 뒤숭숭한 요즘 부모님에게", "건강식품이라도 보내드리는건 어떨까요?"],
+      ["올 한해는 꼭 헬스장을 등록하여", "건강한 내 자신을 만들어봐요!"],
+      ["당신이 얼마나 행복한가는", "당신의 감사의 깊이에 달려있습니다."],
+      ["새해복 많이x100", "받으세요~"],
+      ["혹시...", "돈 복사기가 현존한다는 소식 들으셨나요?"],
+      ["올해는 기필코", "3대 500 달성을 기원합니다."],
+      ["이돈으로 치킨을 시키면", "몇마리일까요?"],
+      ["하고싶은일이 있다면", "미루지말고 올해는 꼭 도전해봐요!"],
+      ["당신은 존재하나만으로", "충분히 가치있는 사람입니다."],
+    ]
+
     if (age == 10) {
       return (
         <>
           <p style={{fontSize: 30, fontWeight: 700}}>{calculateMoney()} 만원</p>
-          <span style={{fontSize: 20, marginBottom: 10}}>요즘도 세뱃돈으로 장난감 사시나요?</span>
-          <span style={{fontSize: 20, marginBottom: 10}}>삼성전자 몰빵이 답입니다.</span>
+          <span style={{fontSize: 20, marginBottom: 10}}>{arr[rand][0]}</span>
+          <span style={{fontSize: 20, marginBottom: 10}}>{arr[rand][1]}</span>
         </>
       )
     } else if (age == 20) {
       return (
         <>
           <p style={{fontSize: 30, fontWeight: 700}}>{calculateMoney()} 만원</p>
-          <span style={{fontSize: 20, marginBottom: 10}}>코로나로 뒤숭숭한 요즘,</span>
-          <span style={{fontSize: 20, marginBottom: 10}}>부모님에게 건강식품이라도</span>
-          <span style={{fontSize: 20, marginBottom: 10}}>보내드리는건 어떨까요?</span>
+          <span style={{fontSize: 20, marginBottom: 10}}>{arr[rand][0]}</span>
+          <span style={{fontSize: 20, marginBottom: 10}}>{arr[rand][1]}</span>
         </>
       )
     } else if (age == 30) {
       return (
         <>
           <p style={{fontSize: 30, fontWeight: 700}}>{calculateMoney()} 만원</p>
-          <span style={{fontSize: 20, marginBottom: 10}}>나이를 생각해야 할 30대,</span>
-          <span style={{fontSize: 20, marginBottom: 10}}>올 한해는 꼭 헬스장을 등록하여</span>
-          <span style={{fontSize: 20, marginBottom: 10}}>건강한 내 자신을 만들어봐요!</span>
+          <span style={{fontSize: 20, marginBottom: 10}}>{arr[rand][0]}</span>
+          <span style={{fontSize: 20, marginBottom: 10}}>{arr[rand][1]}</span>
         </>
       )
     } else if (age == 40) {
@@ -164,7 +182,7 @@ function NewYearMoney({match}) {
             <span className="title-second">올해는 얼마나 받을까..!</span>
             <div className="section-body">
               <img src={MoneyImg} height={200} width={250}/>
-              <button className="button" onClick={onClickStartButton}>세뱃돈 측정하기</button>
+              <button className="button" onClick={onClickStartButton}>세뱃돈 예측하기</button>
             </div>
           </div>
         ) : [

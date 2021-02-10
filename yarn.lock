@@ -9126,6 +9126,11 @@ raw-body@2.4.0:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
+react-adfit-web-component@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/react-adfit-web-component/-/react-adfit-web-component-1.0.2.tgz#a8e158dc3d782d65a6990cf5f7b4a0afa52d3770"
+  integrity sha512-mHcsdd63LuebegYhUJbbwOktaMfzyUZmUkz+0uOaJJ2ri2U/nLLV3tttTb+yyMRMcwVGmJWH2IAmo5ljU4TB1g==
+
 react-adsense@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/react-adsense/-/react-adsense-0.1.0.tgz#f170007a9ab05ee2cd1c915cdc9788624658e3c1"
